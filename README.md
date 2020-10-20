@@ -5,8 +5,8 @@ GIVEN:
 For this assignment, you will be expected to
 DEVELOP & SUBMIT:
 
-<li>
-  Step 1)
+
+Step 1)
 - Currently your thread had 3 hard-coded threads (see Program.cs)
   You need to modify the code to use a LIST - and I suggest you make it a list of Thread objects.  Perhaps the following snippet will help :)
     List<Thread> vTList = new List<Thread>();
