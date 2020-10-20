@@ -4,7 +4,9 @@ GIVEN:
 
 For this assignment, you will be expected to
 DEVELOP & SUBMIT:
-Step 1)
+
+<li>
+  Step 1)
 - Currently your thread had 3 hard-coded threads (see Program.cs)
   You need to modify the code to use a LIST - and I suggest you make it a list of Thread objects.  Perhaps the following snippet will help :)
     List<Thread> vTList = new List<Thread>();
@@ -14,9 +16,11 @@ Step 1)
      /*start */      t.Start(); //start each thread running 
      /*join  */      t.Join(); //start each thread running
   (commit this to main - make the comment "List of tLotteryVendor Threads") {10 points: 5pts it works using vTList, 3pts I can clearly see you understand List and how it can be used in a Thread context.  2pts commit name}
+
 Step 2)
 - modify the code to have 4 threads, each selling 1,000,000 lottery tickets
  (commit this to main - make the comment "4Threads@10M each") {10 points:  2pts commit exists, 2 pts comment, 4pt correct code # of tickes sold, 2pts I can clearly see you understand Thread control.}
+
 Step 3)
 - modify the code to use local & global counters.
   Currently, your code has 4 Threads, each locking the global stack called 'soldTickets' 1M each (that is 4M locks - lots of opportunity for blocking and OS delay)
