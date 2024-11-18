@@ -26,3 +26,26 @@ Step 3)
 Note:  You may have many other commits - that is OK, but you should have only 3 commits having the comments specified here (for grading clarity)
 IF you fail to have the commit, you would loose out on the commit exists points and the correct comment name points - so commit these 3 different times! :)
 
+
+
+2024 Fall
+1) Pass in from the command line:
+  - # of tickets to sell
+  - # of threads for Vendor part
+  - # of threads for Compute Statistics part
+
+2) Run your program with the following:
+  - dotnet run 40_000_000 4 4
+  - dotnet run 80_000_000 8 4
+
+3) Remove lock contention in your code/solution
+  - LotteryVendor needs to NOT all lock on the one global soldTickets stack at the same time!
+    (hint: use a local data collection)
+  - LotteryStatistics needs to NOT lock on the soldTickets stack at the same time!
+    (hint: use a local data collection)
+
+4)  Run your program with the following:
+  - dotnet run 40_000_000 4 4
+  - dotnet run 80_000_000 8 4
+
+5) Give me a comment on your time differences between #2 and #4.

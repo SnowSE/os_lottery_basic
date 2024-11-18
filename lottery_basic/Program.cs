@@ -7,7 +7,7 @@ namespace lottery_basic
     class Program
     {
         static LotteryPeriod p = new LotteryPeriod();
-        static int vTicketsToSell = 1000000; 
+        static int vTicketsToSell = 100_000_000; 
         static int vThreadCount=3; //VENDOR Thread Count
 
             
@@ -15,11 +15,15 @@ namespace lottery_basic
         {
             //Stopwatch to measure how long N threads take to sell _____ tickets
             System.Diagnostics.Stopwatch timer = new System.Diagnostics.Stopwatch();
+            Thread thr  = new Thread(tLotteryVendor); 
+            Thread thr2 = new Thread(tLotteryVendor);
+            Thread thr3 = new Thread(tLotteryVendor);
             timer.Start();       
 
-            Thread thr  = new Thread(tLotteryVendor); thr.Start();
-            Thread thr2 = new Thread(tLotteryVendor);thr2.Start();
-            Thread thr3 = new Thread(tLotteryVendor);thr3.Start();
+            thr.Start();
+            thr2.Start();
+            thr3.Start();
+            
             thr.Join();thr2.Join();thr3.Join();
             
             //Stopwatch stop
