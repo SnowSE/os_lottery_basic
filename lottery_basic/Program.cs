@@ -7,7 +7,7 @@ namespace lottery_basic
     class Program
     {
         static LotteryPeriod p = new LotteryPeriod();
-        static int vTicketsToSell = 100_000_000; 
+        static int vTicketsToSell = 10_000_000; 
         static int vThreadCount=3; //VENDOR Thread Count
 
             
@@ -18,7 +18,8 @@ namespace lottery_basic
             Thread thr  = new Thread(tLotteryVendor); 
             Thread thr2 = new Thread(tLotteryVendor);
             Thread thr3 = new Thread(tLotteryVendor);
-            timer.Start();       
+            timer.Start();
+            Console.WriteLine("SellingTickets!!!");
 
             thr.Start();
             thr2.Start();
